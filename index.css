@@ -232,7 +232,6 @@ video{
     font-family: "Tektur", sans-serif;
     color: rgb(255, 255, 255);
     font-size: clamp(3rem, 7vw, 13rem);
-    /* font-size: 6rem; */
     text-shadow: 0 5px 5px rgb(0, 0, 0);
     padding: 3rem;
     width: 100%;
@@ -619,12 +618,8 @@ section{
     a{
         font-size: 0.8rem;
     }
-    .wrapper{}
     .item{
         width: calc((100% / 8) - 45px)
-    }
-    .skill-area{
-
     }
 }
 
