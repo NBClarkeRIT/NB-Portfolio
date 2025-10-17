@@ -143,9 +143,9 @@ video{
 .art-title{
     font-family: "Tektur", sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 6rem;
+    font-size: clamp(3rem, 7vw, 13rem);
+    padding: 2vw;
     text-shadow: 0 5px 5px rgb(0, 0, 0);
-    padding: 3rem;
     width: 100%;
     font-weight: 900;
     text-align: center;
@@ -231,7 +231,8 @@ video{
 .rampage-logo{
     font-family: "Tektur", sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 6rem;
+    font-size: clamp(3rem, 7vw, 13rem);
+    /* font-size: 6rem; */
     text-shadow: 0 5px 5px rgb(0, 0, 0);
     padding: 3rem;
     width: 100%;
@@ -587,6 +588,10 @@ section{
     object-fit: contain;
 }
 
+#plinkoTop{
+    background-color: rgb(64, 84, 64);
+}
+
 .oe-logo{
     animation: rotateLoop 4s ease-in-out infinite;
     transform-origin: center;
@@ -614,11 +619,83 @@ section{
     a{
         font-size: 0.8rem;
     }
+    .wrapper{}
+    .item{
+        width: calc((100% / 8) - 45px)
+    }
+    .skill-area{
+
+    }
 }
 
 @media screen and (max-width: 40rem){
     nav{
         display: none;
+    }
+    .item{
+        display: none;
+    }
+    .skill-area{
+        width: 75%;
+    }
+
+    .project-description{
+    display: grid;
+    height: 60vh;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "logo logo"
+    "image image";
+    }
+    
+    .alt-project{
+    display: flex;
+    position: relative;
+    background-color: #0e0e10;
+    z-index: -1;
+    overflow: hidden;
+}
+
+    .article-text{
+        display: none;
+        color: white;
+        padding: 5rem;
+        padding-top: 1rem;
+        z-index: 3;
+    }
+
+    .grid-wrapper{
+    background-color:  #191716;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .article2{
+        display: none;
+    }
+
+
+    .screenshot{
+        width: 80%;
+        height: auto;
+        margin: 1rem;
+    }
+    .section-block{
+    background-color:  #191716;
+    height: fit-content;
+    display: flex;
+    align-items: start;
+    
+    }
+    .art-img{
+        width: 90vw;
+        height: auto;
+        object-fit: contain;
+        margin: 1rem;
     }
 
 }
